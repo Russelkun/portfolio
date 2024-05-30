@@ -1,0 +1,46 @@
+//
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway" , system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    overflow-x: hidden;
+    line-height: 2rem;
+}
+
+input,
+button,
+textarea,
+::placeholder {
+    font: inherit;
+    overflow: auto;
+}
+
+button {
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+textarea {
+    white-space: revert;
+}
+
+a {
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+}

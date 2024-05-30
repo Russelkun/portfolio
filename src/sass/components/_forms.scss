@@ -1,0 +1,79 @@
+// forms
+
+.query {
+    h2 {
+        text-align: center;
+    }
+    place-content: center;
+    ::placeholder {
+        color: transparent
+    }
+
+    .query_form {
+        max-width: 800px;
+        margin: auto;
+        // border: 2px solid black;
+        padding: 1rem;
+        position: relative;
+        // box-shadow: -.5rem -.7rem 0rem brown;
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and (width <= 768px) {
+            box-shadow: none;
+        }
+        button {
+            border: 2px solid black;
+            background-color: transparent;
+            min-width: 150px;
+        }
+    }
+}
+
+//inputs 
+
+.input-pair {
+    position: relative;
+
+    input, textarea {
+        &:focus-visible {
+            outline: 2px solid brown;
+            border-color: brown;
+        }
+        border: 2px solid black;
+        transition: all .4s, outline .1s;
+        -webkit-transition: all .4s, outline .1s;
+        -moz-transition: all .4s, outline .1s;
+        -ms-transition: all .4s, outline .1s;
+        -o-transition: all .4s, outline .1s;
+}
+
+    .input-pair_text {
+        min-width: 80%;
+        margin: 1rem auto 0;
+        padding: .2rem .5rem;
+        
+        @media screen and (width > 576px) {
+            max-width: 500px;
+        }
+    }
+    .input-pair_label {
+        position: absolute;
+        inset: 1.3rem .6rem;
+        pointer-events: none;
+        transition: transform .6s, opacity .8s;
+        -webkit-transition: transform .6s, opacity .8s;
+        -moz-transition: transform .6s, opacity .8s;
+        -ms-transition: transform .6s, opacity .8s;
+        -o-transition: transform .6s, opacity .8s;
+}
+
+    .input-pair_text:focus + .input-pair_label, .input-pair_text:not(:placeholder-shown) + .input-pair_label {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+        opacity: 0;
+}
+}

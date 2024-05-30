@@ -1,0 +1,58 @@
+//
+
+.mobile-nav-toggle {
+    background-color: transparent;
+    border: none;
+    --transition-speed: 200ms;
+    width: 45px;
+    aspect-ratio: 1.1;
+    padding-inline-end: .2rem;
+    margin-top: .5rem;
+    z-index: 1000;
+    border: 2px solid white;
+
+    .line {
+        transition: transform var(--transition-speed) ease-in var(--transition-speed), rotate var(--transition-speed) ease-in, opacity 0s var(--transition-speed);
+        -webkit-transition: transform var(--transition-speed) ease-in var(--transition-speed), rotate var(--transition-speed) ease-in, opacity 0s var(--transition-speed);
+        -moz-transition: transform var(--transition-speed) ease-in var(--transition-speed), rotate var(--transition-speed) ease-in, opacity 0s var(--transition-speed);
+        -ms-transition: transform var(--transition-speed) ease-in var(--transition-speed), rotate var(--transition-speed) ease-in, opacity 0s var(--transition-speed);
+        -o-transition: transform var(--transition-speed) ease-in var(--transition-speed), rotate var(--transition-speed) ease-in, opacity 0s var(--transition-speed);
+        transform-origin: center;
+    }
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+    border: 2px solid black;
+    z-index: 1000;
+
+    .line {
+        transition: transform var(--transition-speed) ease-in, rotate var(--transition-speed) ease-in var(--transition-speed), opacity 0ms var(--transition-speed);
+        -webkit-transition: transform var(--transition-speed) ease-in, rotate var(--transition-speed) ease-in var(--transition-speed), opacity 0ms var(--transition-speed);
+        -moz-transition: transform var(--transition-speed) ease-in, rotate var(--transition-speed) ease-in var(--transition-speed), opacity 0ms var(--transition-speed);
+        -ms-transition: transform var(--transition-speed) ease-in, rotate var(--transition-speed) ease-in var(--transition-speed), opacity 0ms var(--transition-speed);
+        -o-transition: transform var(--transition-speed) ease-in, rotate var(--transition-speed) ease-in var(--transition-speed), opacity 0ms var(--transition-speed);
+        // fill: white;
+}
+    
+    .line_middle {
+        opacity: 0;
+    }
+
+    .line_top {
+        transform: translateY(1.2rem);
+        -webkit-transform: translateY(1.2rem);
+        -moz-transform: translateY(1.2rem);
+        -ms-transform: translateY(1.2rem);
+        -o-transform: translateY(1.2rem);
+        rotate: 45deg;
+    }
+
+    .line_bottom {
+        transform: translateY(-1.2rem);
+        -webkit-transform: translateY(-1.2rem);
+        -moz-transform: translateY(-1.2rem);
+        -ms-transform: translateY(-1.2rem);
+        -o-transform: translateY(-1.2rem);
+        rotate: -45deg;
+}
+}

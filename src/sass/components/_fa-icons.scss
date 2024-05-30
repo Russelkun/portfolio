@@ -1,0 +1,55 @@
+
+.fa-brands {
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    // bordeR: 2px solid black;
+}
+
+.fa-facebook {
+    color: blue;
+
+    &:hover {
+        box-shadow: 0 0 1rem .1rem;
+    }
+}
+
+.fa-whatsapp {
+    color: green;
+    &:hover {
+        box-shadow: 0 0 1rem .1rem;
+    }
+}
+
+.fa-instagram {
+    // instagram shades:
+    --insta-one: #ffdf9e;
+    --insta-two: #ffc273;
+    --insta-three: #e56969;
+    --insta-four: #c1558b;
+    --insta-five: #8a49a1;
+    color: var(--insta-five);
+    background: -webkit-linear-gradient(var(--insta-three), var(--insta-five), var(--insta-four));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        box-shadow: 0 0 1rem .5rem;
+    }
+}
+
+.fa-x-twitter {
+    color: black;
+    &:hover {
+        box-shadow: 0 0 1rem .1rem;
+    }
+}
+
+.fa-yahoo {
+    color: purple;
+    &:hover {
+        box-shadow: 0 0 1rem .1rem;
+    }
+}

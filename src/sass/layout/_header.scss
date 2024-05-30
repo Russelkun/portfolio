@@ -1,0 +1,117 @@
+@use "../components/" as *;
+@use "../utilities/" as *;
+
+//main-header role: banner;
+
+body.open {
+    overflow: hidden;
+}
+
+
+
+.top-nav {
+    ul {
+        list-style: none;
+    }
+
+    a {
+        color: inherit;
+    }
+    --nav-bg: #c29a7d;
+    background-color: var(--nav-bg);
+    // background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: .5rem;
+    // margin-block: 0 1rem;
+    height: 4rem;
+
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    @media screen and (width > 768px) {
+        .main-nav_burger {
+            display: none;
+        }
+    }
+}
+
+.primary-navigation {
+
+    @media screen and (width <= 768px) {
+        background-color: hsl(0 0% 78% /.21);
+        backdrop-filter: blur(1rem);
+        flex-direction: column;
+        position: fixed;
+        inset: 0 0 0 40%;
+        padding: min(10vh, 8rem) 2rem;
+        translate: 100%;
+        transition: translate .8s;
+        -webkit-transition: translate .8s;
+        -moz-transition: translate .8s;
+        -ms-transition: translate .8s;
+        -o-transition: translate .8s;
+        span[aria-hidden="true"] {
+            font-weight: 600;
+            margin-inline: .2rem;
+        }
+        a {
+            display: block;
+            border-bottom: 2px solid black;
+            // background-color: red;
+        }
+    }
+
+    @media screen and (width <= 992px) and (orientation: landscape) {
+        background-color: hsl(0 0% 78% /.21);
+        backdrop-filter: blur(1rem);
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        place-content: center;
+        text-align: center;
+        padding: min(10vh, 8rem) 2rem;
+        translate: 0 -100%;
+        transition: translate .8s;
+        -webkit-transition: translate .8s;
+        -moz-transition: translate .8s;
+        -ms-transition: translate .8s;
+        -o-transition: translate .8s;
+        span[aria-hidden="true"] {
+            font-weight: 600;
+            margin-inline: .2rem;
+        }
+        a {
+            display: block;
+            border: none;
+            // background-color: red;
+        }
+        li {
+            width: fit-content;
+            padding-inline: 1rem;
+            margin: auto;
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+.primary-navigation[data-visible="true"] {
+    translate: 0;
+}
+
+.main-nav-nav.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.main-nav_burger {
+    z-index: 100;
+}
