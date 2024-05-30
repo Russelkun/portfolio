@@ -1,0 +1,25 @@
+@use "../components/" as *;
+@use "../utilities/" as *;
+.content {
+    padding: 2rem;
+    @media screen and (width > 992px) {
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+}
+
+// picture control
+.picture {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .picture_img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+//

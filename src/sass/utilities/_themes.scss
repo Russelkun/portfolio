@@ -1,0 +1,35 @@
+@mixin themes($theme) {
+    @if $theme == paletteOne {
+        background-color: #724927;
+        color: #2e1008;
+    }
+
+    @else if $theme == paletteTwo {
+        background-color: #c29a7d;
+        color: #2e1008;
+    }
+
+    @else if $point == paletteThree {
+        background-color: #4d392b;
+        color: #857567;
+    }
+}
+
+//theme classes
+
+.theme-a {
+    background-color: #724927;
+    color: #2e1008;
+}
+.theme-b {
+    background-color: #c29a7d;
+    color: #2e1008;
+}
+.theme-c {
+    background-color: #4d392b;
+    color: #857567;
+}
+// .theme-a {
+//     background-color: ;
+//     color: ;
+// }
